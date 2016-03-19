@@ -1,0 +1,7 @@
+jupyter
+requests
+geocoder
+pandas
+arrow
+pandas-profiling
+ratelim
