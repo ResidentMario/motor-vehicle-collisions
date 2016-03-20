@@ -1,0 +1,2349 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 9200.16.0201.1945                                -->
+<workbook source-platform='mac' version='9.2' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <repository-location id='NYCFatalMotorVehicleCollisionHotspots' path='/workbooks' revision='1.2' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='NYPD Motor Vehicle Collisions Enriched' inline='true' name='textscan.0ggnq7f06dv9os11rlodb0x9msko' version='9.2'>
+      <connection class='textscan' directory='/Users/Honors/Desktop/motor-vehicle-collisions' filename='NYPD Motor Vehicle Collisions Enriched.csv' password='' server='' username=''>
+        <relation name='NYPD Motor Vehicle Collisions Enriched#csv' table='[NYPD Motor Vehicle Collisions Enriched#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='UNIQUE KEY' ordinal='0' />
+            <column datatype='datetime' name='DATETIME' ordinal='1' />
+            <column datatype='string' name='BOROUGH' ordinal='2' />
+            <column datatype='real' name='ZIP CODE' ordinal='3' />
+            <column datatype='real' name='LATITUDE' ordinal='4' />
+            <column datatype='real' name='LONGITUDE' ordinal='5' />
+            <column datatype='string' name='LOCATION' ordinal='6' />
+            <column datatype='string' name='ON STREET NAME' ordinal='7' />
+            <column datatype='string' name='CROSS STREET NAME' ordinal='8' />
+            <column datatype='string' name='OFF STREET NAME' ordinal='9' />
+            <column datatype='integer' name='NUMBER OF PERSONS INJURED' ordinal='10' />
+            <column datatype='integer' name='NUMBER OF PERSONS KILLED' ordinal='11' />
+            <column datatype='integer' name='NUMBER OF PEDESTRIANS INJURED' ordinal='12' />
+            <column datatype='integer' name='NUMBER OF PEDESTRIANS KILLED' ordinal='13' />
+            <column datatype='integer' name='NUMBER OF CYCLIST INJURED' ordinal='14' />
+            <column datatype='integer' name='NUMBER OF CYCLIST KILLED' ordinal='15' />
+            <column datatype='integer' name='NUMBER OF MOTORIST INJURED' ordinal='16' />
+            <column datatype='integer' name='NUMBER OF MOTORIST KILLED' ordinal='17' />
+            <column datatype='string' name='CONTRIBUTING FACTOR VEHICLE 1' ordinal='18' />
+            <column datatype='string' name='CONTRIBUTING FACTOR VEHICLE 2' ordinal='19' />
+            <column datatype='string' name='CONTRIBUTING FACTOR VEHICLE 3' ordinal='20' />
+            <column datatype='string' name='CONTRIBUTING FACTOR VEHICLE 4' ordinal='21' />
+            <column datatype='string' name='CONTRIBUTING FACTOR VEHICLE 5' ordinal='22' />
+            <column datatype='string' name='VEHICLE TYPE CODE 1' ordinal='23' />
+            <column datatype='string' name='VEHICLE TYPE CODE 2' ordinal='24' />
+            <column datatype='string' name='VEHICLE TYPE CODE 3' ordinal='25' />
+            <column datatype='string' name='VEHICLE TYPE CODE 4' ordinal='26' />
+            <column datatype='string' name='VEHICLE TYPE CODE 5' ordinal='27' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>UNIQUE KEY</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[UNIQUE KEY]</local-name>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias>UNIQUE KEY</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DATETIME</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[DATETIME]</local-name>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias>DATETIME</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;datetime&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BOROUGH</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[BOROUGH]</local-name>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias>BOROUGH</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ZIP CODE</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ZIP CODE]</local-name>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias>ZIP CODE</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LATITUDE</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[LATITUDE]</local-name>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias>LATITUDE</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LONGITUDE</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[LONGITUDE]</local-name>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias>LONGITUDE</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LOCATION</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[LOCATION]</local-name>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias>LOCATION</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ON STREET NAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ON STREET NAME]</local-name>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias>ON STREET NAME</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CROSS STREET NAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CROSS STREET NAME]</local-name>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias>CROSS STREET NAME</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OFF STREET NAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[OFF STREET NAME]</local-name>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias>OFF STREET NAME</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NUMBER OF PERSONS INJURED</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NUMBER OF PERSONS INJURED]</local-name>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias>NUMBER OF PERSONS INJURED</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NUMBER OF PERSONS KILLED</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NUMBER OF PERSONS KILLED]</local-name>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias>NUMBER OF PERSONS KILLED</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NUMBER OF PEDESTRIANS INJURED</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NUMBER OF PEDESTRIANS INJURED]</local-name>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias>NUMBER OF PEDESTRIANS INJURED</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NUMBER OF PEDESTRIANS KILLED</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NUMBER OF PEDESTRIANS KILLED]</local-name>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias>NUMBER OF PEDESTRIANS KILLED</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NUMBER OF CYCLIST INJURED</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NUMBER OF CYCLIST INJURED]</local-name>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias>NUMBER OF CYCLIST INJURED</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NUMBER OF CYCLIST KILLED</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NUMBER OF CYCLIST KILLED]</local-name>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias>NUMBER OF CYCLIST KILLED</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NUMBER OF MOTORIST INJURED</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NUMBER OF MOTORIST INJURED]</local-name>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias>NUMBER OF MOTORIST INJURED</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NUMBER OF MOTORIST KILLED</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NUMBER OF MOTORIST KILLED]</local-name>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias>NUMBER OF MOTORIST KILLED</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CONTRIBUTING FACTOR VEHICLE 1</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CONTRIBUTING FACTOR VEHICLE 1]</local-name>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias>CONTRIBUTING FACTOR VEHICLE 1</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CONTRIBUTING FACTOR VEHICLE 2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CONTRIBUTING FACTOR VEHICLE 2]</local-name>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias>CONTRIBUTING FACTOR VEHICLE 2</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CONTRIBUTING FACTOR VEHICLE 3</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CONTRIBUTING FACTOR VEHICLE 3]</local-name>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias>CONTRIBUTING FACTOR VEHICLE 3</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CONTRIBUTING FACTOR VEHICLE 4</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CONTRIBUTING FACTOR VEHICLE 4]</local-name>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias>CONTRIBUTING FACTOR VEHICLE 4</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CONTRIBUTING FACTOR VEHICLE 5</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CONTRIBUTING FACTOR VEHICLE 5]</local-name>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias>CONTRIBUTING FACTOR VEHICLE 5</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>VEHICLE TYPE CODE 1</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[VEHICLE TYPE CODE 1]</local-name>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias>VEHICLE TYPE CODE 1</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>VEHICLE TYPE CODE 2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[VEHICLE TYPE CODE 2]</local-name>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias>VEHICLE TYPE CODE 2</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>VEHICLE TYPE CODE 3</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[VEHICLE TYPE CODE 3]</local-name>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias>VEHICLE TYPE CODE 3</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>VEHICLE TYPE CODE 4</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[VEHICLE TYPE CODE 4]</local-name>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias>VEHICLE TYPE CODE 4</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>VEHICLE TYPE CODE 5</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[VEHICLE TYPE CODE 5]</local-name>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias>VEHICLE TYPE CODE 5</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[NYPD Motor Vehicle Collisions Enriched#csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Borough' datatype='string' name='[BOROUGH]' role='dimension' type='nominal' />
+      <column caption='Contributing Factor Vehicle 1' datatype='string' name='[CONTRIBUTING FACTOR VEHICLE 1]' role='dimension' type='nominal' />
+      <column caption='Contributing Factor Vehicle 2' datatype='string' name='[CONTRIBUTING FACTOR VEHICLE 2]' role='dimension' type='nominal' />
+      <column caption='Contributing Factor Vehicle 3' datatype='string' name='[CONTRIBUTING FACTOR VEHICLE 3]' role='dimension' type='nominal' />
+      <column caption='Contributing Factor Vehicle 4' datatype='string' name='[CONTRIBUTING FACTOR VEHICLE 4]' role='dimension' type='nominal' />
+      <column caption='Contributing Factor Vehicle 5' datatype='string' name='[CONTRIBUTING FACTOR VEHICLE 5]' role='dimension' type='nominal' />
+      <column caption='Cross Street Name' datatype='string' name='[CROSS STREET NAME]' role='dimension' type='nominal' />
+      <column caption='Average Fatalness' datatype='real' name='[Calculation_1047649927020843008]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='sum([NUMBER OF PERSONS KILLED])/count([UNIQUE KEY])' />
+      </column>
+      <column caption='Calculation2' datatype='real' name='[Calculation_1047649927025278977]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([CONTRIBUTING FACTOR VEHICLE 1])/COUNT([UNIQUE KEY])' />
+      </column>
+      <column caption='Datetime' datatype='datetime' name='[DATETIME]' role='dimension' type='ordinal' />
+      <column aggregation='Avg' caption='Latitude' datatype='real' name='[LATITUDE]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column caption='Location' datatype='string' name='[LOCATION]' role='dimension' type='nominal' />
+      <column aggregation='Avg' caption='Longitude' datatype='real' name='[LONGITUDE]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Number Of Cyclist Injured' datatype='integer' name='[NUMBER OF CYCLIST INJURED]' role='measure' type='quantitative' />
+      <column caption='Number Of Cyclist Killed' datatype='integer' name='[NUMBER OF CYCLIST KILLED]' role='measure' type='quantitative' />
+      <column caption='Number Of Motorist Injured' datatype='integer' name='[NUMBER OF MOTORIST INJURED]' role='measure' type='quantitative' />
+      <column caption='Number Of Motorist Killed' datatype='integer' name='[NUMBER OF MOTORIST KILLED]' role='measure' type='quantitative' />
+      <column caption='Number Of Pedestrians Injured' datatype='integer' name='[NUMBER OF PEDESTRIANS INJURED]' role='measure' type='quantitative' />
+      <column caption='Number Of Pedestrians Killed' datatype='integer' name='[NUMBER OF PEDESTRIANS KILLED]' role='measure' type='quantitative' />
+      <column caption='Number Of Persons Injured' datatype='integer' name='[NUMBER OF PERSONS INJURED]' role='measure' type='quantitative' />
+      <column caption='Number Of Persons Killed' datatype='integer' name='[NUMBER OF PERSONS KILLED]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Off Street Name' datatype='string' name='[OFF STREET NAME]' role='dimension' type='nominal' />
+      <column caption='On Street Name' datatype='string' name='[ON STREET NAME]' role='dimension' type='nominal' />
+      <column caption='Unique Key' datatype='integer' name='[UNIQUE KEY]' role='dimension' type='ordinal' />
+      <column caption='Vehicle Type Code 1' datatype='string' name='[VEHICLE TYPE CODE 1]' role='dimension' type='nominal' />
+      <column caption='Vehicle Type Code 2' datatype='string' name='[VEHICLE TYPE CODE 2]' role='dimension' type='nominal' />
+      <column caption='Vehicle Type Code 3' datatype='string' name='[VEHICLE TYPE CODE 3]' role='dimension' type='nominal' />
+      <column caption='Vehicle Type Code 4' datatype='string' name='[VEHICLE TYPE CODE 4]' role='dimension' type='nominal' />
+      <column caption='Vehicle Type Code 5' datatype='string' name='[VEHICLE TYPE CODE 5]' role='dimension' type='nominal' />
+      <column caption='Zip Code' datatype='real' default-format='*00000' name='[ZIP CODE]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection class='dataengine' dbname='/Users/Honors/Documents/My Tableau Repository/Datasources/NYPD Motor Vehicle Collisions Enriched.tde' schema='Extract' tablename='Extract' update-time='03/19/2016 07:25:56 PM'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <calculations>
+            <calculation column='[Number of Records]' formula='1' />
+          </calculations>
+          <refresh>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='769054' timestamp-start='2016-03-19 19:25:56.269' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>BOROUGH</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[BOROUGH]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>BOROUGH</remote-alias>
+              <ordinal>0</ordinal>
+              <family>NYPD Motor Vehicle Collisions Enriched#csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;BRONX&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;STATEN ISLAND&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>584753</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CONTRIBUTING FACTOR VEHICLE 1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[CONTRIBUTING FACTOR VEHICLE 1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CONTRIBUTING FACTOR VEHICLE 1</remote-alias>
+              <ordinal>1</ordinal>
+              <family>NYPD Motor Vehicle Collisions Enriched#csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>48</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Accelerator Defective&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;Windshield Inadequate&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>767363</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>10</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CONTRIBUTING FACTOR VEHICLE 2</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[CONTRIBUTING FACTOR VEHICLE 2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CONTRIBUTING FACTOR VEHICLE 2</remote-alias>
+              <ordinal>2</ordinal>
+              <family>NYPD Motor Vehicle Collisions Enriched#csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>48</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Accelerator Defective&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;Windshield Inadequate&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>676675</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>11</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CONTRIBUTING FACTOR VEHICLE 3</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[CONTRIBUTING FACTOR VEHICLE 3]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CONTRIBUTING FACTOR VEHICLE 3</remote-alias>
+              <ordinal>3</ordinal>
+              <family>NYPD Motor Vehicle Collisions Enriched#csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>39</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Accelerator Defective&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;View Obstructed/Limited&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>49848</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>9</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CONTRIBUTING FACTOR VEHICLE 4</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[CONTRIBUTING FACTOR VEHICLE 4]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CONTRIBUTING FACTOR VEHICLE 4</remote-alias>
+              <ordinal>4</ordinal>
+              <family>NYPD Motor Vehicle Collisions Enriched#csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>30</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Aggressive Driving/Road Rage&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;Windshield Inadequate&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>10256</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>8</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CONTRIBUTING FACTOR VEHICLE 5</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[CONTRIBUTING FACTOR VEHICLE 5]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CONTRIBUTING FACTOR VEHICLE 5</remote-alias>
+              <ordinal>5</ordinal>
+              <family>NYPD Motor Vehicle Collisions Enriched#csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>22</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Alcohol Involvement&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;Unspecified&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>2569</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>7</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CROSS STREET NAME</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[CROSS STREET NAME]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CROSS STREET NAME</remote-alias>
+              <ordinal>6</ordinal>
+              <family>NYPD Motor Vehicle Collisions Enriched#csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7735</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;1 AVENUE&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;ZWICKY AVENUE&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>655435</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>14</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>4</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>DATETIME</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[DATETIME]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>DATETIME</remote-alias>
+              <ordinal>7</ordinal>
+              <family>NYPD Motor Vehicle Collisions Enriched#csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>7166</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='datetime'>#2012-01-01 00:00:00#</statistic>
+                <statistic aggregation='Max' datatype='datetime'>#2016-01-01 23:59:00#</statistic>
+                <statistic aggregation='Count' datatype='integer'>769054</statistic>
+                <statistic aggregation='Median' datatype='datetime'>#2014-01-01 12:36:00#</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>0</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;datetime&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>LATITUDE</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[LATITUDE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>LATITUDE</remote-alias>
+              <ordinal>8</ordinal>
+              <family>NYPD Motor Vehicle Collisions Enriched#csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>46637</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>26387249.409605339</statistic>
+                <statistic aggregation='Avg' datatype='real'>40.722760685407167</statistic>
+                <statistic aggregation='Min' datatype='real'>40.498948799999994</statistic>
+                <statistic aggregation='Max' datatype='real'>40.9128276</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.077071089578873958</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.077071030107939739</statistic>
+                <statistic aggregation='Var' datatype='real'>0.0059399528488748134</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.0059399436818989536</statistic>
+                <statistic aggregation='Count' datatype='integer'>647973</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>1074565491.7766373</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>LOCATION</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[LOCATION]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>LOCATION</remote-alias>
+              <ordinal>9</ordinal>
+              <family>NYPD Motor Vehicle Collisions Enriched#csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>47021</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;(40.4989488, -74.2443651)&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;[40.8805017, -73.900672]&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>647973</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>16</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>4</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>LONGITUDE</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[LONGITUDE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>LONGITUDE</remote-alias>
+              <ordinal>10</ordinal>
+              <family>NYPD Motor Vehicle Collisions Enriched#csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>46705</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>-47900851.734814689</statistic>
+                <statistic aggregation='Avg' datatype='real'>-73.92414766481734</statistic>
+                <statistic aggregation='Min' datatype='real'>-74.254531599999993</statistic>
+                <statistic aggregation='Max' datatype='real'>-73.7005968</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.085988237859120825</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.085988171507381611</statistic>
+                <statistic aggregation='Var' datatype='real'>0.0073939770501167401</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.0073939656391828739</statistic>
+                <statistic aggregation='Count' datatype='integer'>647973</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>3541034428.0050607</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>NUMBER OF CYCLIST INJURED</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[NUMBER OF CYCLIST INJURED]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>NUMBER OF CYCLIST INJURED</remote-alias>
+              <ordinal>11</ordinal>
+              <family>NYPD Motor Vehicle Collisions Enriched#csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>4</statistic>
+                <statistic aggregation='Count' datatype='integer'>769054</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>NUMBER OF CYCLIST KILLED</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[NUMBER OF CYCLIST KILLED]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>NUMBER OF CYCLIST KILLED</remote-alias>
+              <ordinal>12</ordinal>
+              <family>NYPD Motor Vehicle Collisions Enriched#csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+                <statistic aggregation='Count' datatype='integer'>769054</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>18</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>NUMBER OF MOTORIST INJURED</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[NUMBER OF MOTORIST INJURED]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>NUMBER OF MOTORIST INJURED</remote-alias>
+              <ordinal>13</ordinal>
+              <family>NYPD Motor Vehicle Collisions Enriched#csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>43</statistic>
+                <statistic aggregation='Count' datatype='integer'>769054</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>NUMBER OF MOTORIST KILLED</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[NUMBER OF MOTORIST KILLED]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>NUMBER OF MOTORIST KILLED</remote-alias>
+              <ordinal>14</ordinal>
+              <family>NYPD Motor Vehicle Collisions Enriched#csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>5</statistic>
+                <statistic aggregation='Count' datatype='integer'>769054</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>NUMBER OF PEDESTRIANS INJURED</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[NUMBER OF PEDESTRIANS INJURED]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>NUMBER OF PEDESTRIANS INJURED</remote-alias>
+              <ordinal>15</ordinal>
+              <family>NYPD Motor Vehicle Collisions Enriched#csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>15</statistic>
+                <statistic aggregation='Count' datatype='integer'>769054</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>NUMBER OF PEDESTRIANS KILLED</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[NUMBER OF PEDESTRIANS KILLED]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>NUMBER OF PEDESTRIANS KILLED</remote-alias>
+              <ordinal>16</ordinal>
+              <family>NYPD Motor Vehicle Collisions Enriched#csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>2</statistic>
+                <statistic aggregation='Count' datatype='integer'>769054</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>NUMBER OF PERSONS INJURED</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[NUMBER OF PERSONS INJURED]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>NUMBER OF PERSONS INJURED</remote-alias>
+              <ordinal>17</ordinal>
+              <family>NYPD Motor Vehicle Collisions Enriched#csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>43</statistic>
+                <statistic aggregation='Count' datatype='integer'>769054</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>NUMBER OF PERSONS KILLED</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[NUMBER OF PERSONS KILLED]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>NUMBER OF PERSONS KILLED</remote-alias>
+              <ordinal>18</ordinal>
+              <family>NYPD Motor Vehicle Collisions Enriched#csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>5</statistic>
+                <statistic aggregation='Count' datatype='integer'>769054</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>19</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+                <statistic aggregation='Count' datatype='integer'>769054</statistic>
+                <statistic aggregation='Median' datatype='integer'>1</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>OFF STREET NAME</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[OFF STREET NAME]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>OFF STREET NAME</remote-alias>
+              <ordinal>20</ordinal>
+              <family>NYPD Motor Vehicle Collisions Enriched#csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>17852</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;(26 BROOKLYN TERMINAL MARKET LOT)&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;YANKEE STA LOT @ E 153 ST &amp; RIVER AVE&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>23792</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>15</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>4</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ON STREET NAME</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ON STREET NAME]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ON STREET NAME</remote-alias>
+              <ordinal>21</ordinal>
+              <family>NYPD Motor Vehicle Collisions Enriched#csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6971</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;1 AVENUE&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;ZULETTE AVENUE&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>655435</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>13</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>4</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>UNIQUE KEY</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[UNIQUE KEY]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>UNIQUE KEY</remote-alias>
+              <ordinal>22</ordinal>
+              <family>NYPD Motor Vehicle Collisions Enriched#csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>769054</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>1255475894530.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>1632493.8099665304</statistic>
+                <statistic aggregation='Min' datatype='integer'>22</statistic>
+                <statistic aggregation='Max' datatype='integer'>3405174</statistic>
+                <statistic aggregation='Stdev' datatype='real'>1472064.5483424836</statistic>
+                <statistic aggregation='StdevP' datatype='real'>1472063.5912802834</statistic>
+                <statistic aggregation='Var' datatype='real'>2166974034486.7605</statistic>
+                <statistic aggregation='VarP' datatype='real'>2166971216773.0051</statistic>
+                <statistic aggregation='Count' datatype='integer'>769054</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>3.7160745085265644e+18</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>17</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>VEHICLE TYPE CODE 1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[VEHICLE TYPE CODE 1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>VEHICLE TYPE CODE 1</remote-alias>
+              <ordinal>23</ordinal>
+              <family>NYPD Motor Vehicle Collisions Enriched#csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>18</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;AMBULANCE&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;VAN&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>768105</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>4</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>VEHICLE TYPE CODE 2</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[VEHICLE TYPE CODE 2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>VEHICLE TYPE CODE 2</remote-alias>
+              <ordinal>24</ordinal>
+              <family>NYPD Motor Vehicle Collisions Enriched#csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>18</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;AMBULANCE&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;VAN&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>688860</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>5</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>VEHICLE TYPE CODE 3</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[VEHICLE TYPE CODE 3]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>VEHICLE TYPE CODE 3</remote-alias>
+              <ordinal>25</ordinal>
+              <family>NYPD Motor Vehicle Collisions Enriched#csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>18</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;AMBULANCE&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;VAN&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>49989</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>6</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>VEHICLE TYPE CODE 4</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[VEHICLE TYPE CODE 4]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>VEHICLE TYPE CODE 4</remote-alias>
+              <ordinal>26</ordinal>
+              <family>NYPD Motor Vehicle Collisions Enriched#csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>17</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;AMBULANCE&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;VAN&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>10260</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>3</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>VEHICLE TYPE CODE 5</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[VEHICLE TYPE CODE 5]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>VEHICLE TYPE CODE 5</remote-alias>
+              <ordinal>27</ordinal>
+              <family>NYPD Motor Vehicle Collisions Enriched#csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>16</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;AMBULANCE&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;VAN&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>2570</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ZIP CODE</remote-name>
+              <remote-type>4</remote-type>
+              <local-name>[ZIP CODE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ZIP CODE</remote-alias>
+              <ordinal>28</ordinal>
+              <family>NYPD Motor Vehicle Collisions Enriched#csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>191</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='real'>10000.0</statistic>
+                <statistic aggregation='Max' datatype='real'>11697.0</statistic>
+                <statistic aggregation='Count' datatype='integer'>584686</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>12</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;float&quot;</attribute>
+              </attributes>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.581633' measure-ordering='alphabetic' measure-percentage='0.418367' rowDisplayCount='100' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Fatal Collision Hotspots'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='NYPD Motor Vehicle Collisions Enriched' name='textscan.0ggnq7f06dv9os11rlodb0x9msko' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='textscan.0ggnq7f06dv9os11rlodb0x9msko'>
+            <column caption='Borough' datatype='string' name='[BOROUGH]' role='dimension' type='nominal' />
+            <column caption='Average Fatalness' datatype='real' name='[Calculation_1047649927020843008]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='sum([NUMBER OF PERSONS KILLED])/count([UNIQUE KEY])' />
+            </column>
+            <column aggregation='Avg' caption='Latitude' datatype='real' name='[LATITUDE]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' caption='Longitude' datatype='real' name='[LONGITUDE]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column caption='Number Of Persons Killed' datatype='integer' name='[NUMBER OF PERSONS KILLED]' role='measure' type='quantitative' />
+            <column caption='Unique Key' datatype='integer' name='[UNIQUE KEY]' role='dimension' type='ordinal' />
+            <column-instance column='[UNIQUE KEY]' derivation='Count' name='[cnt:UNIQUE KEY:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[BOROUGH]' derivation='None' name='[none:BOROUGH:nk]' pivot='key' type='nominal' />
+            <column-instance column='[LATITUDE]' derivation='None' name='[none:LATITUDE:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[LONGITUDE]' derivation='None' name='[none:LONGITUDE:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[NUMBER OF PERSONS KILLED]' derivation='Sum' name='[sum:NUMBER OF PERSONS KILLED:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1047649927020843008]' derivation='User' name='[usr:Calculation_1047649927020843008:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[textscan.0ggnq7f06dv9os11rlodb0x9msko].[cnt:UNIQUE KEY:qk]' included-values='in-range'>
+            <min>1</min>
+            <max>585</max>
+          </filter>
+          <filter class='categorical' column='[textscan.0ggnq7f06dv9os11rlodb0x9msko].[none:BOROUGH:nk]'>
+            <groupfilter from='&quot;BRONX&quot;' function='range' level='[none:BOROUGH:nk]' to='&quot;STATEN ISLAND&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[textscan.0ggnq7f06dv9os11rlodb0x9msko].[sum:NUMBER OF PERSONS KILLED:qk]' included-values='in-range'>
+            <min>3</min>
+            <max>5</max>
+          </filter>
+          <filter class='quantitative' column='[textscan.0ggnq7f06dv9os11rlodb0x9msko].[usr:Calculation_1047649927020843008:qk]' included-values='in-range'>
+            <min>0.0</min>
+            <max>1.0</max>
+          </filter>
+          <slices>
+            <column>[textscan.0ggnq7f06dv9os11rlodb0x9msko].[none:BOROUGH:nk]</column>
+            <column>[textscan.0ggnq7f06dv9os11rlodb0x9msko].[usr:Calculation_1047649927020843008:qk]</column>
+            <column>[textscan.0ggnq7f06dv9os11rlodb0x9msko].[cnt:UNIQUE KEY:qk]</column>
+            <column>[textscan.0ggnq7f06dv9os11rlodb0x9msko].[sum:NUMBER OF PERSONS KILLED:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[textscan.0ggnq7f06dv9os11rlodb0x9msko].[none:LONGITUDE:qk]' field-type='quantitative' max='-8191152.4015247067' min='-8266371.2646847973' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[textscan.0ggnq7f06dv9os11rlodb0x9msko].[none:LATITUDE:qk]' field-type='quantitative' max='5000188.2823181199' min='4945203.2032139478' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[textscan.0ggnq7f06dv9os11rlodb0x9msko].[usr:Calculation_1047649927020843008:qk]' palette='tableau-red' type='interpolated' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='tab_base' value='true' />
+            <format attr='enabled' id='um_lcover' value='true' />
+            <format attr='enabled' id='tab_coastline' value='false' />
+            <format attr='enabled' id='pp2_line' value='false' />
+            <format attr='enabled' id='light_adm0_bnd' value='false' />
+            <format attr='enabled' id='light_adm0_lbl' value='false' />
+            <format attr='enabled' id='um_adm0_bnd' value='true' />
+            <format attr='enabled' id='um_adm0_lbl' value='true' />
+            <format attr='enabled' id='light_pp2_statebounds' value='false' />
+            <format attr='enabled' id='light_pp2_statelabels' value='false' />
+            <format attr='enabled' id='pp2_adminlabels' value='false' />
+            <format attr='enabled' id='pp2_statebounds' value='true' />
+            <format attr='enabled' id='pp2_statelabels' value='true' />
+            <format attr='enabled' id='countybounds' value='false' />
+            <format attr='enabled' id='countylabels' value='false' />
+            <format attr='enabled' id='zipbounds' value='false' />
+            <format attr='enabled' id='ziplabels' value='false' />
+            <format attr='enabled' id='tab_areabounds' value='false' />
+            <format attr='enabled' id='tab_arealabels' value='false' />
+            <format attr='enabled' id='tab_msabounds' value='false' />
+            <format attr='enabled' id='tab_msalabels' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[textscan.0ggnq7f06dv9os11rlodb0x9msko].[usr:Calculation_1047649927020843008:qk]' />
+              <size column='[textscan.0ggnq7f06dv9os11rlodb0x9msko].[cnt:UNIQUE KEY:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='has-halo' value='false' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#000000' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[textscan.0ggnq7f06dv9os11rlodb0x9msko].[none:LATITUDE:qk]</rows>
+        <cols>[textscan.0ggnq7f06dv9os11rlodb0x9msko].[none:LONGITUDE:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='NYPD Motor Vehicle Collisions Enriched' name='textscan.0ggnq7f06dv9os11rlodb0x9msko' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.0ggnq7f06dv9os11rlodb0x9msko'>
+            <column caption='Number Of Persons Killed' datatype='integer' name='[NUMBER OF PERSONS KILLED]' role='measure' type='quantitative' />
+            <column caption='Unique Key' datatype='integer' name='[UNIQUE KEY]' role='dimension' type='ordinal' />
+            <column-instance column='[UNIQUE KEY]' derivation='Count' name='[cnt:UNIQUE KEY:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[NUMBER OF PERSONS KILLED]' derivation='None' name='[none:NUMBER OF PERSONS KILLED:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[UNIQUE KEY]' derivation='None' name='[none:UNIQUE KEY:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[textscan.0ggnq7f06dv9os11rlodb0x9msko].[none:UNIQUE KEY:ok]'>
+            <groupfilter expression='SUM([NUMBER OF PERSONS KILLED]) &gt;= 1' function='filter' user:ui-filter-by-field='true' user:ui-marker='filter-by'>
+              <groupfilter function='level-members' level='[none:UNIQUE KEY:ok]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[textscan.0ggnq7f06dv9os11rlodb0x9msko].[none:UNIQUE KEY:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[textscan.0ggnq7f06dv9os11rlodb0x9msko].[cnt:UNIQUE KEY:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[textscan.0ggnq7f06dv9os11rlodb0x9msko].[cnt:UNIQUE KEY:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[textscan.0ggnq7f06dv9os11rlodb0x9msko].[none:NUMBER OF PERSONS KILLED:ok]</rows>
+        <cols />
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows source-height='28'>
+    <window class='worksheet' maximized='true' name='Fatal Collision Hotspots'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[textscan.0ggnq7f06dv9os11rlodb0x9msko].[usr:Calculation_1047649927020843008:qk]' type='color' />
+            <card pane-specification-id='0' param='[textscan.0ggnq7f06dv9os11rlodb0x9msko].[cnt:UNIQUE KEY:qk]' type='size' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[textscan.0ggnq7f06dv9os11rlodb0x9msko].[usr:Calculation_1047649927020843008:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[textscan.0ggnq7f06dv9os11rlodb0x9msko].[cnt:UNIQUE KEY:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[textscan.0ggnq7f06dv9os11rlodb0x9msko].[sum:NUMBER OF PERSONS KILLED:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[textscan.0ggnq7f06dv9os11rlodb0x9msko].[none:BOROUGH:nk]</field>
+            <field>[textscan.0ggnq7f06dv9os11rlodb0x9msko].[none:UNIQUE KEY:ok]</field>
+            <field>[textscan.0ggnq7f06dv9os11rlodb0x9msko].[none:ZIP CODE:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[textscan.0ggnq7f06dv9os11rlodb0x9msko].[cnt:UNIQUE KEY:qk]</field>
+            <field>[textscan.0ggnq7f06dv9os11rlodb0x9msko].[none:NUMBER OF PERSONS KILLED:qk]</field>
+            <field>[textscan.0ggnq7f06dv9os11rlodb0x9msko].[none:UNIQUE KEY:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Fatal Collision Hotspots' width='192'>
+      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
+      AABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='144' name='Sheet 2' width='144'>
+      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
+      AElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
